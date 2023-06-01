@@ -1,0 +1,5 @@
+package com.ust.bootdocker;
+
+public class Welcome {
+
+}

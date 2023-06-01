@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;bootsecurity-jpamysql&apos; to &apos;bootsecurity-jpa-mysql&apos;&#x0D;&#x0A;- Original element: &apos;bootsecurity-jpamysql&apos;&#x0D;&#x0A;- Renamed element: &apos;bootsecurity-jpamysql&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;bootsecurity-jpamysql&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=bootsecurity-jpamysql" name="bootsecurity-jpa-mysql" references="true" stamp="1684825638356" version="1.0"/>
+</session>
