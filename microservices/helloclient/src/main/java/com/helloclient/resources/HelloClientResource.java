@@ -17,8 +17,8 @@ public class HelloClientResource {
 	public String callServer() {
 		//String url="http://localhost:8094/rest/service";
 		String url="http://localhost:8093/rest/service/status";//8093 is gateway
-		//String url="http://localhost:8093/rest/billingservice";
-		String output=template.getForObject(url, String.class);
+//		//String url="http://localhost:8093/rest/billingservice";
+	String output=template.getForObject(url, String.class);
 		return output;
 		}
 	

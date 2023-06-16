@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ust.rest.resource.Product;
@@ -23,8 +25,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/product/api.1.0")//controller will use services to get product from repository
+@RequestMapping("/product/api.2.0")//controller will use services to get product from repository
 //@RequestMapping("/cust")
+@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+
 @Api(value="Product service API 2.0",description="Rest endpoints for product API")
 public class ProductResource {
 	 @Autowired
@@ -42,8 +46,8 @@ public class ProductResource {
 		  }
 		  
 			
-		  
-		  
+//		  
+//		  @CrossOrigin
 			  @GetMapping
 			  
 			  @RequestMapping("/retrieve/all")
@@ -89,7 +93,8 @@ public class ProductResource {
 	  public String test() {
 		  return "test() called.....";//for product client project
 	  }
-	 
+	  
+	
 	  @DeleteMapping
 	  
 	  @RequestMapping(value="delete/{productId}")

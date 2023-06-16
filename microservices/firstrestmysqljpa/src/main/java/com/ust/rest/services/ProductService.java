@@ -65,8 +65,16 @@ public class ProductService {
 		return productRepository.findAll();
 	}
 	
-	  public Product updateProduct(Product product) { return
-	  productRepository.save(product); }
+	  public Product updateProduct(Product product) 
+	  {
+		  Optional<Product> optional=productRepository.findById(product.getProductId());
+		Product tempProduct=optional.get();
+		tempProduct.setName(product.getName());
+		tempProduct.setDescription(product.getDescription());
+		tempProduct.setPrice(product.getPrice());
+		tempProduct.setQty(product.getQty());
+		  return productRepository.save(tempProduct); }
+	  
 	 
 	  public void deleteProduct(long productId)
 	  { productRepository.deleteById(productId); }

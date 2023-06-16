@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloService {
 String port;
 @Autowired
-Environment environment;//is a reference to properties file.
+Environment environment;//is a reference to properties file. environment is just a class used to get port number from microservice
 
 
 	@Value("name")//value is coming from application.properties file
